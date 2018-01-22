@@ -1,0 +1,39 @@
+.a, #b {
+  color: red;
+}
+
+.mixin-class {
+  .a();
+}
+
+.mixin-id {
+  #b();
+}
+
+.my-hover-mixin() {
+  &:hover {border: 1px solid red;}}
+
+button {
+  .my-hover-mixin();
+}
+
+#my-library {
+  .my-mixin() {
+    color: black;
+  }
+}
+
+.class {
+  #my-library > .my-mixin();
+}
+
+.foo (@bg: #f5f5f5, @color: #900) {
+  background: @bg;
+  color: @color;
+}
+.unimportant {
+  .foo();
+}
+.important {
+  .foo() !important;
+}

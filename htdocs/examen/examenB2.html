@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="busqueda" />
+    <ul id="sugerencias"></ul>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        let timeoutHandler = -1;
+        let lista_articulos = [];
+
+        $.get("http://www.mocky.io/v2/5a54ae822d00005f235b1cd2")
+            .done(data => lista_articulos = data);
+
+        $("#busqueda").keypress(function (event) {
+            console.log(timeoutHandler);
+            if (timeoutHandler >= 0)
+                clearTimeout(timeoutHandler);
+
+            timeoutHandler = setTimeout(() => {
+                mostrarListaFiltrada(filtrarArticulos(this.value));
+            }, 800);
+        });
+
+        function filtrarArticulos(texto_a_buscar) {
+            return lista_articulos.filter((llibre) => {
+                return (llibre.titulo &&
+                    llibre.titulo.indexOf(texto_a_buscar) >= 0) ||
+                    (llibre.autor &&
+                        llibre.autor.indexOf(texto_a_buscar) >= 0);
+            });
+        }
+
+        function mostrarListaFiltrada(arr_a_mostrar) {
+            $("#sugerencias").html('');
+            arr_a_mostrar.forEach((llibre) => {
+                $("#sugerencias").append($("<li></li>").html((llibre.titulo ? llibre.titulo : '') + " - " +
+                    (llibre.autor ? llibre.autor : '')));
+            });
+        }
+    </script>
+</body>
+
+</html>

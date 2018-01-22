@@ -1,0 +1,283 @@
+/* General */
+* {
+    font-family: Helvetica, arial;
+    color: #D35400;
+    padding: 0px;
+    margin: 0px;
+    font-size: 15pt;
+}
+h3 {
+    font-size: 40px;
+    font-weight: 700;
+}
+h5 {
+    font-size: 26px;
+    font-weight: 700;
+}
+body {
+    font-family: helvetica, Arial;
+    color: #C0CA33;
+    background-color: #f5f5f5;
+}
+/* Fin General */
+
+/* Header */
+header {
+    width: 100%;
+    height: 42pt;
+    margin-bottom: 20pt;
+    background-color: #eb5b0c;
+    position: relative;
+}
+header nav {
+    width: 100%;
+    height: 100%;
+}
+header nav div {
+    display: inline-block;
+}
+header .logo {
+    position: absolute;
+    padding-left: 20px;
+}
+header .logo a {
+    text-decoration-line: none;
+    font-size: 0pt;
+}
+header .logo img {
+    width: 250px;
+}
+header .login {
+    /* position: absolute; */
+    /* right: 20px; */
+    float: right;
+    /* top: 8px; */
+    width: 250px;
+    margin-top: 10px;
+    margin-right: 5px;
+    /* display: -webkit-flex;
+  display: flex; */
+    /* border: 1px solid black; */
+    height: 20px;
+}
+header .login>div {
+    display: inline-block;
+    margin: 0pt 5pt;
+    float: right;
+}
+header .login a {
+    text-decoration-line: none;
+    font-size: 0pt;
+}
+header .login img {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+@media (max-width:650px) {}
+@media (max-width:450px) {
+    header .logo {
+        display: block;
+        position: relative;
+        text-align: center;
+    }
+    header .login {
+        display: block;
+        float: initial;
+        margin: auto;
+        position: relative;
+    }
+    header .login div {
+        float: initial;
+        position: relative;
+        text-align: center;
+    }
+    header {
+        margin-bottom: 70px;
+    }
+}
+/* Final Header */
+
+/* Footer */
+.rellenofooter {
+    margin: 0px;
+    padding: 0px;
+    background-color: transparent;
+    height: 50px;
+}
+footer {
+    position: fixed;
+    bottom: 0px;
+    background: #ea5b0c;
+    width: 100%;
+    height: 50px;
+}
+footer>div {
+    display: inline-block;
+    line-height: initial;
+}
+footer>.enlaces {
+    margin-left: 20pt;
+    width: 400pt;
+    background: #ea5b0c;
+}
+footer>.enlaces>div {
+    display: inline-block;
+    margin-left: 30pt;
+    margin-top: 15pt;
+    top: 0px;
+}
+.rrssicon {
+    position: absolute;
+    margin-top: 8pt;
+    right: 20pt;
+}
+.rrssicon a {
+    text-decoration-line: none;
+    font-size: 0pt;
+}
+.rrssicon img {
+    width: 25pt;
+    margin-right: 5pt;
+}
+@media (max-width:700px) {
+    .rellenofooter {
+        height: 90px;
+    }
+    footer {
+        height: 110px;
+    }
+    footer>.enlaces {
+        margin-left: 0pt;
+        width: 180pt;
+    }
+    footer>.enlaces>div {
+        display: block;
+        margin-left: 20pt;
+        margin-top: 5pt;
+        top: 0px;
+    }
+    footer>.enlaces>div:first-of-type {
+        margin-top: 15pt;
+    }
+    .rrssicon {
+        right: 10pt;
+    }
+}
+@media (max-width:400px) {
+    .rellenofooter {
+        height: 90px;
+    }
+    footer {
+        height: 90px;
+    }
+    footer>.enlaces {
+        margin-left: 0pt;
+        width: 130pt;
+        margin-top: 0pt;
+    }
+    footer>.enlaces>div {
+        display: block;
+        margin-left: 10pt;
+        margin-top: 1pt;
+        top: 0px;
+    }
+    footer>.enlaces>div:first-of-type {
+        margin-top: 10px;
+    }
+    footer>.enlaces>div>a {
+        font-size: 13pt;
+    }
+    .rrssicon {
+        right: 0pt;
+    }
+    .rrssicon img {
+        width: 18pt;
+        margin-right: 5pt;
+    }
+}
+/* Final Footer */
+
+/* Ayuda */
+.ayuda h1 {
+    margin: auto;
+    margin-top: 3%;
+    text-align: center;
+    font-family: Helvetica, arial;
+    font-size: 30px;
+    color: #C0CA33;
+}
+
+.ayuda p {
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-family: Helvetica, arial;
+    font-size: 20px;
+    color: #C0CA33;
+}
+
+.contacto {
+    margin: auto;
+    width: 70%;
+    border: 4px solid #566573;
+    border-radius: 10px;
+    padding: 20px 20px 20px 20px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    background-color: white;
+}
+
+.contacto label {
+    text-align: center;
+    margin-bottom: 15px;
+    display: block;
+    font-weight: bold;
+}
+
+.contacto div {
+    margin-left: 8%;
+    margin-top: 15px;
+    margin-bottom: 1px;
+    width: 80%;
+}
+
+.contacto input {
+    align-content: center;
+    text-decoration-color: #f5f5f5;
+    padding: 6px 6px;
+    width: 100%;
+    border: 1px solid #f5f5f5;
+    border-radius: 5px;
+    resize: none;
+    box-shadow: 0 0 0 3px #f5f5f5;
+}
+
+.contacto textarea {
+    padding: 70px 6px;
+    width: 100%;
+    border: 1px solid #f5f5f5;
+    border-radius: 5px;
+    resize: none;
+    box-shadow: 0 0 0 3px #f5f5f5;
+}
+
+.contacto input :focus {
+    box-shadow: none;
+}
+
+.nounderline {
+    color: white;
+    text-decoration: none;
+}
+/* Final Ayuda */
+
+
+@media (max-width:1690px) {}
+@media (max-width:1280px) {}
+@media (max-width:980px) {}
+@media (max-width:736px) {}
+@media (max-width:480px) {}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <!-- <button id="resuelve">Resuelve</button> -->
+    <div id="recibido"></div>
+</body>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script>
+    var urles = ['http://www.mocky.io/v2/5a578d022e0000623d120239',
+    'http://www.mocky.io/v2/5a578d822e00006d3d120240',
+    'http://www.mocky.io/v2/5a5784bd2e0000623a1201eb',
+    'http://www.mocky.io/v2/5a5783742e0000fa391201dc',
+    'http://www.mocky.io/v2/5a5784882e00008f3b1201e9',
+    'http://www.mocky.io/v2/5a5783b82e00006d3b1201e0',
+    'http://www.mocky.io/v2/5a5784172e00006d3b1201e5',
+    'http://www.mocky.io/v2/5a578e552e0000713d120248',
+    'http://www.mocky.io/v2/5a578f772e00006f3d120255',
+    'http://www.mocky.io/v2/5a5786222e0000aa3b1201f9',
+    'http://www.mocky.io/v2/5a5783452e0000c4391201d8',
+    'http://www.mocky.io/v2/5a5783402e0000c4391201d6',
+    'http://www.mocky.io/v2/5a5783072e0000623a1201d3',
+    'http://www.mocky.io/v2/5a578e432e0000093e120247',];
+    
+        var est = ['marta esteban',
+'angel',
+'ruben',
+'daniil',
+'marta martinez',
+'joan',
+'josep',
+'johnny',
+'ismail',
+'alba',
+'iñigo',
+'olga',
+'vera',
+'manuel'];
+
+for (let index = 0; index < urles.length; index++) {
+    $.getJSON(urles[index], [],
+        function (data, textStatus, jqXHR) {
+            var url = data;
+            var esti = est[index];
+            console.log(data, textStatus, jqXHR)
+            // console.log(url[3]);
+                for (let i = 0; i < url.length; i++) {
+                    if (url[i]=="ismail") {
+                        $('#recibido').html(esti);
+                    }
+                }
+        }
+    );
+}
+
+    // $('button').click(function (e) {
+        // e.preventDefault();
+        // for (let index = 0; index < urles.length; index++) {
+            // // url = urles[index];
+            // $.getJSON('http://www.mocky.io/v2/5a5783072e0000623a1201d3', data, function (data, textStatus, xhr) {
+            //     console.log(data, textStatus, xhr);
+            //     }
+            // );
+
+
+            
+        // }
+
+    // });
+
+</script>
+
+</html>

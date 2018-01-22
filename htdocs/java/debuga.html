@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="lista">
+
+    </ul>
+    <button id="btnSuerte">Suerte!</button>
+    <p id="result"></p>
+    <script>
+        const size = 10;
+        var arrLista = new Array;
+        var clicks = 0;
+        var htmlLista = document.getElementById("lista");
+        var btnSuerte = document.getElementById("btnSuerte");
+
+        // Crea un array, inicializa todas las posiciones hasta SIZE a "0" y lo devuelve
+        function inicializaArray() {
+            var arr = [];
+            for (let i = 0; i < size; i++) {
+                arr[i] = 0;
+            }
+            return arr;
+        }
+
+        // Para cada elemento de arrLista, crea un li, asigna el texto a su valor y lo añade al elemento
+        // htmlLista
+        function inicializaHTML() {
+            htmlLista.innerHTML = "";
+            for (let i = 0; i < arrLista.length; i++) {
+                let li = document.createElement("li");
+                li.innerText = arrLista[i];
+                lista.appendChild(li);
+            }
+            result.innerText="a ver???";
+        }
+
+        // Comprueba si todos los elementos son distintos de 0, cuando encuentra uno a 0, asigna premio a falso
+        // y sale del bucle
+        // Si no encuentra ninguno, premio será "true" y mostrará el mensaje en pantalla
+        function checkPremio() {
+            let premio = true;
+            for (let i = 0; i < arrLista.length; i++) {
+                if (arrLista[i] == 0) {
+                    premio = false;
+                    break;                
+}
+            }
+            if (premio == true) {
+                document.getElementById("result").innerText = "PREMIO! Ha costado [" + clicks + "] CLICKS!! Conseguirlo!";
+                btnSuerte.disabled = true;
+            }
+        }
+
+        // Elige una posición aleatoria del array arrLista, suma 1 al valor en esa posición y modifica
+        // el texto del elemento y suma 1 al contador clicks
+        function suerteClick() {
+            clicks++;
+            var posicionRandom = Math.floor(Math.random() * 10);
+            arrLista[posicionRandom]++;
+            lista.childNodes[posicionRandom].innerText = arrLista[posicionRandom];
+            checkPremio();
+        }
+
+        btnSuerte.onclick = suerteClick;
+        arrLista = inicializaArray();
+        inicializaHTML();
+    </script>
+</body>
+
+</html>

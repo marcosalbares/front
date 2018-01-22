@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel:400,900|Pacifico');
+
+.hola{background-color: black; margin: 50pt;padding-right: 50pt;text-align: center}
+.adios{color:violet}
+.hola{font-family:Pacifico, cursive}
+.adios{font-family: Cinzel; font-size: 10pt;font-weight: 10pt}
+
+p{color: red; font-family: 'Times New Roman', Times, serif;font-weight: 30pt;font-size: 30pt;
+    border: 25px;border-color: black;border-style: solid}
+div{width: 100%; height: 100%;
+    border: 25px;border-color: black;border-style: solid;border-width: 1px}
+body{color: blue}

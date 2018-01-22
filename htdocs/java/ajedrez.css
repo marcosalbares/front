@@ -1,0 +1,17 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+div {position: absolute;
+    border: 1px solid orangered;
+}
+
+/*#tablero {width: 500px;
+height: 500px;}
+
+/*div {
+    width: 20px;
+    height: 20px;
+    background-color: orangered;
+}*/

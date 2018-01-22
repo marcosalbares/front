@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn">click</button>
+    <script src="./node_modules/rxjs/bundles/Rx.js"></script>
+
+    <!-- <script>
+            var button = document.querySelector('button');
+        Rx.Observable.fromEvent(button, 'click')
+            .subscribe(() => console.log('Clicked!'));
+    </script> -->
+
+    <script>
+        var onLoginSucces = new Rx.Subject();
+        var button = document.querySelector('button');
+        Rx.Observable.fromEvent(button, 'click')
+            .subscribe(() => onLoginSucces.next({
+                nombre: "ygy",
+                apellido: "parra",
+                tipus: "VIP"
+            }));
+
+        onLoginSucces.subscribe((data) => {
+            console.log("Es VIP: " + data.tipus)
+        })
+
+        onLoginSucces.subscribe((data) => {
+            console.log("Gurdado en 80 " + JSON.stringify(data));
+        });
+
+        // onLoginSucces.next({
+        //     nombre: "ygy",
+        //     apellido: "parra",
+        //     tipus: "VIP"
+        // });
+        // onLoginSucces.next({
+        //     nombre: "alex",
+        //     apellido: "par",
+        //     tipus: "VIP"
+        // });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+[
+{
+"titulo":"Temperatura",
+"texto":"¿Prefieres una plato para entrar en calor o fresco?",
+"inputType":"radio",
+"inputName":"temp",
+"inputId":["Caliente", "Frio"], 
+"labelForTexto":["Caliente", "Frio"],
+},
+{
+"titulo":"Piso en Cardedu",
+"fecha":"2017-12-21",
+"precio":"820",
+"periodo":"mensual",
+"habitaciones":"3",
+"m2":"80",
+"descripcion":"CARDEDEUESPORTS Pis seminou de cinc anys d´antigüetat, disposa de tres habitacions, una doble amb armari enquestat força gran, una altre tambe doble, i la tercera individual, salo menjador molt luminos, cuina office complerta i ben equipada i amb sortida a safareig, dos banys complerts, un de quatre peçes amb banyera i l´altre de tres amb banyera, tancaments exteriors d´alumini, terres de parquet, calefacció, plaça de parquing i traster al mateix edifici, ascensor, bona situacio",
+"foto":"http://lorempixel.com/200/200/"
+},{
+"titulo":"Piso en Cardedu",
+"fecha":"2017-12-21",
+"precio":"820",
+"periodo":"mensual",
+"habitaciones":"3",
+"m2":"80",
+"descripcion":"CARDEDEUESPORTS Pis seminou de cinc anys d´antigüetat, disposa de tres habitacions, una doble amb armari enquestat força gran, una altre tambe doble, i la tercera individual, salo menjador molt luminos, cuina office complerta i ben equipada i amb sortida a safareig, dos banys complerts, un de quatre peçes amb banyera i l´altre de tres amb banyera, tancaments exteriors d´alumini, terres de parquet, calefacció, plaça de parquing i traster al mateix edifici, ascensor, bona situacio",
+"foto":"http://lorempixel.com/200/200/"
+},{
+"titulo":"Piso en Cardedu",
+"fecha":"2017-12-21",
+"precio":"820",
+"periodo":"mensual",
+"habitaciones":"3",
+"m2":"80",
+"descripcion":"CARDEDEUESPORTS Pis seminou de cinc anys d´antigüetat, disposa de tres habitacions, una doble amb armari enquestat força gran, una altre tambe doble, i la tercera individual, salo menjador molt luminos, cuina office complerta i ben equipada i amb sortida a safareig, dos banys complerts, un de quatre peçes amb banyera i l´altre de tres amb banyera, tancaments exteriors d´alumini, terres de parquet, calefacció, plaça de parquing i traster al mateix edifici, ascensor, bona situacio",
+"foto":"http://lorempixel.com/200/200/"
+}]

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<script>
+    var cara = 0;
+    var cruz = 0;
+    var total = cara + cruz;
+    var porcara = (cara / total) * 100;
+    var porcruz = (cruz / total) * 100;
+    console.log("cara: " + cara + " cruz: " + cruz);
+</script>
+
+<body style='margin=0; padding=0'>
+    <!--    <button id="boto1" onclick="console.log('clicat')">aprieta</button>
+    <script>
+        function onClickBoto() {
+            console.log("clicat");   
+        }
+
+        var boto1 = document.getElementById("boto1").onclick = onClickBoto;
+    </script>-->
+    <div>
+        <button id="ca">Cara</button>
+        <button id="cr">Cruz</button>
+    </div>
+    <div>
+        <label for="" id="lcara">0</label>
+        <label for="" id="lcruz">0</label>
+    </div>
+    <div>
+        <label for="" id="porcencara">0%</label>
+        <label for="" id="porcencruz">0%</label>
+    </div>
+    <div class="barra" style='display: flex;width: 100pt; height: 20pt;border: 1px solid black; background-color: red;'>
+        <div class="az"></div>
+        <div class="ro"></div>
+    </div>
+
+    <script>
+
+        ca.onclick = (typeArg) => {
+            cara++;
+            actualiza();}
+        cr.onclick = (typeArg) => {
+            cruz++;
+            actualiza();}
+/*        function añadecara() {
+            cara++;
+            actualiza();}
+        function añadecruz() {
+            cruz++;
+            actualiza();}*/
+
+        function actualiza () {
+            console.log("cara: " + cara + " cruz: " + cruz);
+            total = cara + cruz;
+            porcara = (cara / total) * 100;
+            porcruz = (cruz / total) * 100;
+            porcara = porcara.toFixed(1);
+            porcruz = porcruz.toFixed(1);
+            console.log(total + " " + porcara + " " + porcruz);
+            document.getElementById("lcara").innerHTML = cara;
+            document.getElementById("lcruz").innerHTML = cruz;
+            document.getElementById("porcencara").innerHTML = porcara + "%";
+            document.getElementById("porcencruz").innerHTML = porcruz + "%";
+            var azul = document.createElement('style')
+            azul.innerHTML = ".az {background-color: blue; width: " + porcara + "pt; height: 20pt;}";
+            document.body.appendChild(azul);
+            var rojo = document.createElement('style')
+            rojo.innerHTML = ".ro {background-color: transparent; width: " + porcruz + "pt; height: 20pt;}";
+            document.body.appendChild(rojo);
+        }
+
+/*        var ca = document.getElementById("ca").onclick = añadecara;
+        var cr = document.getElementById("cr").onclick = añadecruz;*/
+    </script>
+
+</body>
+
+</html>

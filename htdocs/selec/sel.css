@@ -1,0 +1,23 @@
+section p{
+    font-size: 20pt
+}
+
+div p{
+    color: red
+}
+
+div>p{
+    font-size: 40pt;
+}
+
+div * p{
+    color: blue 
+}
+
+p ~ span{
+    color: green !important
+}
+
+p+span{
+    color: purple
+}

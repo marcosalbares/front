@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Abstract
+        function Staff(pNom, pSalari, pClub = "FCDrink") {
+            if (this.constructor === Staff)
+                throw new Error("No es pot instanciar una classe abstracta");
+            this.nom = pNom;
+            this.salari = pSalari;
+            this.club = pClub;
+        }
+
+        // Abstract
+        function Jugador() {
+            if (this.constructor === Jugador)
+                throw new Error("No es pot instanciar una classe abstracta");
+
+            Staff.apply(this, arguments);
+        }
+        Jugador.prototype = Object.create(Staff.prototype);
+        Jugador.prototype.constructor = Jugador;
+        Jugador.prototype.Jugar5Minutos = function() {
+            this.Correr();
+        }
+        Jugador.prototype.Correr = function() {
+            throw new Error("No es pot cridar un métode abstracte");
+        }
+
+        function Entrenador() {
+            Staff.apply(this, arguments);
+        }
+        Entrenador.prototype = Object.create(Staff.prototype);
+        Entrenador.prototype.constructor = Entrenador;
+        Entrenador.prototype.Gritar = function() {
+            console.log("Gritando..");
+        }
+        Entrenador.prototype.QuejarseAlArbrito = function() {
+            console.log("Borracho!");
+        }
+
+        function Portero() {
+            Jugador.apply(this, arguments);
+        }
+        Portero.prototype = Object.create(Jugador.prototype);
+        Portero.prototype.constructor = Portero;
+        Portero.prototype.Correr = function() {
+            console.log("Más de 10m NO!");
+        }
+        Portero.prototype.Parar = function() {
+            console.log("Paradón..");
+        }
+
+        function Defensa() {
+            Jugador.apply(this, arguments);
+        }
+        Defensa.prototype = Object.create(Jugador.prototype);
+        Defensa.prototype.constructor = Defensa;
+        Defensa.prototype.Correr = function() {
+            console.log("A tope!");
+        }
+        Defensa.prototype.Hostiar = function() {
+            console.log("Toma patada..");
+        }
+
+        function Central() {
+            Jugador.apply(this, arguments);
+        }
+        Central.prototype = Object.create(Jugador.prototype);
+        Central.prototype.constructor = Central;
+        Central.prototype.Correr = function() {
+            console.log("Vamonos!!");
+        }
+        Central.prototype.Pasar = function() {
+            console.log("pase al hueco..");
+        }
+
+        function Delantero() {
+            Jugador.apply(this, arguments);
+        }
+        Delantero.prototype = Object.create(Jugador.prototype);
+        Delantero.prototype.constructor = Delantero;
+        Delantero.prototype.Correr = function() {
+            console.log("Sí hombre!");
+        }
+        Delantero.prototype.Tirarse = function() {
+            console.log("EHH!!! Penal!!!");
+        }
+
+        let equipo = [];
+        equipo.push(new Entrenador("Ricardo Tortajada", 15, "AllStars"));
+        equipo.push(new Portero("Daniil Gryusa", 22));
+        equipo.push(new Defensa("Olga Prottrova", 18));
+        equipo.push(new Defensa("Vera Mentira", 19));
+        equipo.push(new Defensa("Rubén Manuel de Ozores", 35));
+        equipo.push(new Defensa("Joan Petit quan Balla", 11));
+        equipo.push(new Central("Josep Guardiola", 108));
+        equipo.push(new Central("Ismailnyo", 25));
+        equipo.push(new Central("Arnau Swarzenneger", 78));
+        equipo.push(new Delantero("Johnny TechnoSka", 68));
+        equipo.push(new Delantero("Angel Nieto", 98));
+        equipo.push(new Delantero("Marta Pausini", 3));
+
+        equipo.forEach((jugador) => {
+            if (jugador instanceof Jugador)
+                jugador.Jugar5Minutos();
+        });
+
+        function PagarSalario(posicion) {
+            let total = 0;
+            equipo.forEach((jugador) => {
+                if (jugador instanceof posicion)
+                    total += jugador.salari;
+            });
+            console.log(total);
+        }
+
+        PagarSalario(Portero);
+        PagarSalario(Defensa);
+        PagarSalario(Entrenador);
+        PagarSalario(Central);
+        PagarSalario(Delantero);
+        PagarSalario(Jugador);
+        PagarSalario(Staff);
+    </script>
+</body>
+
+</html>

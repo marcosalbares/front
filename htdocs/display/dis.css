@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel:400,900|Pacifico');
+.cab,
+.sec1,
+.sec2 {
+    font-family: Pacifico, sans-serif;
+}
+
+.cab {
+    font-size: 3em;
+    text-align: center
+}
+
+.sec1,
+.sec2 {
+    font-size: 1em;
+}
+
+.cabsec2 {
+    font-size: 2em;
+    text-align: center
+}
+
+.img1 {
+    box-shadow: 20pt -5pt 0pt 20pt gray;
+    border: 2pt solid green;
+    margin: 2em;
+    float: left;
+}
+
+.text1:first-letter {
+    text-transform: capitalize;
+    font-size: 2em;
+    border: 1pt solid black
+}
+
+.text1 {
+    line-height: 3em;
+    border: 1pt solid black
+}

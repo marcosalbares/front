@@ -1,0 +1,21 @@
+#header {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.button {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+.some .selector div {
+  color-2: #008000;
+  padding-2: 20;
+  color-3: #008000;
+  padding-3: 20;
+  margin: 2 2 2 2;
+}
+.caller {
+  width: 100%;
+  height: 200px;
+}

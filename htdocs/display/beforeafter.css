@@ -1,0 +1,10 @@
+.box{background: grey;
+border: 3pt solid blue;
+width: 500pt;
+}
+
+.tri{content: "";
+    width: 100pt;
+height: 100pt;
+}
+}

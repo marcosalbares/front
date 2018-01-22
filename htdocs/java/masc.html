@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Lista mascotas</h1>
+    <div id="divLista" style="border: 1px solid black; width: 40%;height: 40pt;"></div>
+    <div id="chkmascotas"></div>
+
+</body>
+<script>
+    var arrMasc = [];
+    function mascotas(x) {
+        for (let i = 0; i < x; i++) {
+            arrMasc[i] = "Perrito " + i;
+        }
+        console.log(arrMasc);
+    }
+    mascotas(10);
+
+    var lista = "";
+    function print() {
+        for (let i = 0; i < arrMasc.length; i++) {
+            lista += "<input id='chk" + i + "' type='checkbox' value='" + i + "'>" + arrMasc[i] + "<br>";
+        }
+    }
+    print();
+    chkmascotas.innerHTML = lista;
+
+    for (var i = 0; i < arrMasc.length; i++) {
+        document.getElementById("chk"+i).checked = function (e) {
+            alert('soy boton ' + this.innerHTML);
+        }
+    }
+
+</script>
+
+</html>

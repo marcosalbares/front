@@ -1,0 +1,37 @@
+* {
+    width: 100%;
+    margin: 0pt;
+}
+
+header {
+    width: 100%;
+}
+
+header div {
+    display: inline-block;
+    margin: 1%;
+    height: 40pt;
+}
+
+.azul {
+    background-color: blue;
+    width: 30%;
+    min-width: 70pt;
+}
+
+.gris {
+    background-color: gray;
+    width: 62.5%;
+}
+
+section {
+    width: 100%;
+}
+
+section div {
+    display: inline-block;
+    margin: 1%;
+    background-color: orangered;
+    width: 30%;
+    height: 40pt;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="productos" style="border: 1px solid black; width: 40%;display: inline-block;text-align: center;">
+        <h1>Productos</h1>
+    </div>
+    <div id="cesta" style="float: right; border: 1px solid black; width: 40%;display: inline-block;text-align: center;">
+        <h1>Cesta</h1>
+    </div>
+</body>
+
+<script>
+    var arrProd = [];
+    var productos = document.getElementById("productos");
+    var tocho = [];
+    function encesta(j) {
+        if (arrProd[j].encesta == false) {
+            arrProd[j].encesta = true;
+            document.getElementById("cesta").innerHTML += tocho[j];
+            document.getElementById("pr" + j).innerHTML = "";
+            // document.getElementById("pr"+j).style.display="none";
+            // document.getElementById(tocho[j]).remove;
+            // document.getElementById("cesta").appendChild(tocho[j]);
+            // document.getElementById("cesta").appendChild(tocho[j]);
+        }
+        else if (arrProd[j].encesta == true) {
+            arrProd[j].encesta = false;
+            document.getElementById("productos").innerHTML += tocho[j];
+            document.getElementById("pr" + j).innerHTML = "";
+        }
+    }
+
+
+    for (let i = 0; i < 10; i++) {
+        arrProd.push({ nombre: "Prod " + i, precio: i * 5, encesta: false });
+        console.log(arrProd[i]);
+        tocho[i] = "<section id='pr" + i + "' style='border: 1px solid yellow;'><h3>" + arrProd[i].nombre + "</h3><p>Precio: " + arrProd[i].precio + " €</p><button onclick='encesta(" + i + ")'>boton</button></section>";
+        productos.innerHTML += tocho[i];
+    }
+</script>
+
+</html>

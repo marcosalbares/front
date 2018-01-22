@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+<div id="cuadro"></div>
+
+    <script>
+        var mascotas = new Array;
+        var frase = "";
+        function cosa(unArr) {
+            for (let index = 0; index < 1000; index++) {
+                unArr[index] = "m" + index;
+                console.log(unArr[index]);
+                if (index<999) {
+                frase = frase + unArr[index] + ", ";                      
+                }
+                else {frase = frase + unArr[index];}      
+            }
+            console.log(frase);
+        }
+        cosa(mascotas);
+        console.log(mascotas.join(", "));
+
+        var cuadro = document.getElementById("cuadro");
+
+        /*for (var j = 0; j < mascotas.length; j++) {
+            cuadro.innerHTML = "<input type='checkbox' name='tipo' id=" + mascotas[j] + 
+            " value=" + j + "><label for=" + mascotas[j] + ">" + mascotas[j] + "</label>";}*/
+        for (let j = 0; j < mascotas.length; j++) { 
+            cuadro.innerHTML = "<input type='checkbox' name='tipo' id='" + mascotas[j] + 
+            "' value='" + j + "'>";}
+            console.log(mascotas.length);
+    </script>
+</body>
+
+</html>
